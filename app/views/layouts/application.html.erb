@@ -10,6 +10,20 @@
   </head>
 
   <body>
+
+      <div class="header">
+     <div class="header-logo">Connect</div>
+     <div class="header-list">
+      <ul>
+        <%= link_to("Connectとは" , "/about")%>
+        <li>登録する</li>
+        <%= link_to("ログイン" , "/login")%>
+        <%= link_to("投稿一覧" , "/posts/index")%>
+        <p><%= link_to "home", root_path %></p>
+      </ul>
+     </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>

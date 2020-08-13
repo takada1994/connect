@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get :about, to: "home#about"
   get :login, to: "home#login" , as:"login"
 
+  get "posts/:id" => "posts#show"
+
 end
