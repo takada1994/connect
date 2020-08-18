@@ -1,4 +1,13 @@
-<%= form_tag("/posts/#{@post.id}/update") do %>
-<textarea name = "content"><%= @post.content %></textarea>
-<input type="submit" value="保存">
-<% end%>
+<%# 投稿編集ページ %>
+<%= form_with model: @post, url: post_path do |f| %>
+    <%= f.text_area :content %>
+    <%= f.submit value = "投稿を保存する"%>
+<% end %>
+
+<% @post.errors.full_messages.each do |message|%> %>
+    <%= message %>
+<% end %>
+
+<%# 現状の問題点
+投稿を編集後、update post を実行してもデータベースに変更が反映されない。
+投稿一覧ページにリダイレクトされない。 %>
