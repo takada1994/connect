@@ -1,56 +1,26 @@
-<!DOCTYPE html>
+<%# <!DOCTYPE html>
 <html lang="ja">
 <html>
  <head>
     <meta charaset="utf-8">
     <title>connect</title>
     <link rel="stylesheet" href="home.scss">
- </head>
+ </head> %>
 
- <body>
- 
-     <div class="main">
-      <div class="text-center bg-primary">
-        <h1><%= @message%></h1>
-        <h2>シームレスにつながろう</h2>
-      </div>
-      <div class="contents">
-      ピックアップユーザーを掲載
-      </div>
+<link rel="stylesheet" href="home.scss">
 
-
-      <%# <div class="contact-form">
-       <h3 class="section-title">お問い合わせ</h3>
-       　<p>メールアドレス</p>
-       　<p>お名前</p>
-       　<p>お問い合わせ内容</p>
-      </div>
-    </div> %>
-
-    <%# <div class="footer">
-     <div class="footer-logo">Connect</div>
-     <div class="footer-list">
-      <ul>
-        <li>よくある質問</li>
-        <li>お問い合わせ</li>
-        <li>運営者情報</li>
-        <li>プライバシポリシー</li>
-        <li>利用規約</li>
-      </ul>
-     </div>
-    </div> %>
- </body>
-
-  <%# <footer>
-  
-  <div class="container">
-  <div class="footer-logo">Connect</div>
-  <div class="row">
-    <div class="col bg-secondary">メールアドレス</div>
-    <div class="col bg-secondary">よくある質問</div>
-    <div class="col bg-secondary">運営者情報</div>
+<body>
+  <div class = "top-wrapper">
+    <div class="main">
+        <div class="text-center">
+            <h1><%= @message%></h1>
+            <br>
+            <h2>シームレスにつながろう</h2>
+        </div>
+        <div class="contents">
+            <p>ピックアップユーザーを掲載</p>
+        </div>
+    </div>
   </div>
-</div>
-  
-  </footer> %>
-</html>
+</body>
+<%# </html> %>

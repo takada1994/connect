@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <%# ここに記述した内容は全てのviewに適用される %>
-<html>
+<html lang="ja">
   <head>
-    <title>Connect</title>
+    <meta charaset="utf-8">
+    <title>connect</title>
+    <%# <link rel="stylesheet" href="home.scss"> %>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,21 +14,21 @@
   </head>
 
 
-
   <body>
+      <div id = "container">
+          <header>
+            <%= render "shared/header"%>
+          </header>
 
-    <header>
-      <%= render "shared/header"%>
-    </header>
+          <% if flash[:notice] %>
+            <%= flash[:notice]%>
+          <% end %>
 
-    <%= yield %>
+          <%= yield %>
 
-    <footer>
-      <%= render "shared/footer"%>
-    </footer>
-
+          <footer>
+            <%= render "shared/footer"%>
+          </footer>
+      </div>
   </body>
-
-
-
 </html>

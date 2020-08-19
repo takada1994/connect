@@ -2,17 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
+html {
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    letter-spacing: 1px;
 }
 
-.header {
+header {
     background-color: powderblue;
     color: white;
     height: 90px;
-    h2 {
-        
-    }
 }
 
 .header-logo {
@@ -32,26 +31,19 @@ body {
   height: 200px;
 }
 
-.contact-form {
-  padding-top: 100px;
+.top-wrapper {
+    background-image: url(‘/assets/images/back.jpg’);
+    background-size:  cover;
+    opacity:  0.7;
 }
 
 .footer {
   background-color: powderblue;
   color: white;
-  height: 120x;
-  padding: 40px;
+  margin-top: auto;
 }
 
 .footer-logo {
-  font-size: 32px;
+  font-size: 20px;
   float: left;
-}
-
-.footer-list {
-  float: right;
-
-  li {
-    padding-bottom: 20px;
-  }
 }
