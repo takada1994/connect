@@ -17,7 +17,7 @@ before_action :set_user, only: %i[show edit update destroy]
   def create
     @user = User.new(name: params[:name], email: params[:email])
     if @user.save
-      flash[:notice] = "登録しました"
+      flash[:notice] = "登録が完了しました"
       redirect_to(users_path)
     else
       render(new_users_path)
@@ -25,9 +25,19 @@ before_action :set_user, only: %i[show edit update destroy]
   end
 
   def update
+    @user.assign_attributes(params[:user])
+    if @user.save
+      flash[:notice] = "登録情報を変更しました"
+      redirect_to(users_path)
+    else
+      render "edit"
+    end
   end
 
   def destroy
+    @user.destroy
+    flash[:notice] = "ユーザー情報を削除しました"
+    redirect_to(users_path)
   end
 
   private

@@ -15,6 +15,9 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
+
+  def edit
+  end
   
   def create
     @post = Post.new(post_params)
@@ -26,19 +29,24 @@ class PostsController < ApplicationController
     end
   end
 
-
-  def edit
-  end
-
   def update
-    @post.content = params[:content]
+    @post.assign_attributes(params[:post])
     if @post.save
-
+      flash[:notice] = "変更を保存しました"
       redirect_to(posts_path)
     else
       render(edit_post_path)
     end
   end
+  # def update
+  #   @post.content = params[:content]
+  #   if @post.save
+
+  #     redirect_to(posts_path)
+  #   else
+  #     render(edit_post_path)
+  #   end
+  # end
 
 
   def destroy

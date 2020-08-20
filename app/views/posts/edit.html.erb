@@ -7,7 +7,3 @@
 <% @post.errors.full_messages.each do |message|%> %>
     <%= message %>
 <% end %>
-
-<%# 現状の問題点
-投稿を編集後、update post を実行してもデータベースに変更が反映されない。
-投稿一覧ページにリダイレクトされない。 %>

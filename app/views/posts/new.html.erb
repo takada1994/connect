@@ -1,6 +1,6 @@
 <%# 新規投稿ページ %>
 
 <%= form_with model: @post, url: posts_path do |f| %>
-    <%= f.text_area :content %>
-    <%= f.submit value = "投稿する" %>
+    <%= f.text_area :content ,cols:30, rows: 5 %>
+    <%= f.submit "投稿する" %>
 <% end %>

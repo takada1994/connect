@@ -8,16 +8,11 @@ html {
     letter-spacing: 1px;
 }
 
-header {
-    background-color: powderblue;
-    color: white;
-    height: 90px;
-}
-
-.header-logo {
-    float: left;
-    font-size: 40px;
-    padding: 0px 40px;
+// 背景画像に関する設定
+.cover {
+  background-image: image-url('01.jpg'); 
+  background-size: cover;
+  // opacity: 0.7;
 }
 
 .header-list li {
@@ -27,23 +22,15 @@ header {
 }
 
 .main {
-  background-color: #bdf7f1;
-  height: 200px;
+  background-color: #f4f4f4;
+  // height: 200px;
+  height: auto;
+  padding: 40px 0px;
 }
 
-.top-wrapper {
-    background-image: url(‘/assets/images/back.jpg’);
-    background-size:  cover;
-    opacity:  0.7;
-}
-
-.footer {
-  background-color: powderblue;
-  color: white;
-  margin-top: auto;
-}
-
-.footer-logo {
-  font-size: 20px;
-  float: left;
+footer {
+  background-color: rgb(230, 230, 230);
+  color: rgb(0, 0, 0);
+  // padding-top: auto;
+  // margin-top: auto;
 }
