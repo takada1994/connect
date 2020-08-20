@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<%# ここに記述した内容は全てのviewに適用される %>
+<html lang="ja">
   <head>
-    <title>Myproject</title>
+    <meta charaset="utf-8">
+    <title>connect</title>
+    <%# <link rel="stylesheet" href="home.scss"> %>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,22 +13,22 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+      <div id = "container">
+          <header>
+            <%= render "shared/header"%>
+          </header>
 
-      <div class="header">
-     <div class="header-logo"><%= link_to("Connect" , "/")%></div>
-     <div class="header-list">
-      <ul>
-        <%= link_to("Connectとは" , "/about")%>
-        <li>登録する</li>
-        <%= link_to("ログイン" , "/login")%>
-        <%= link_to("投稿一覧" , "/posts/index")%>
-        <%= link_to("新規投稿" , "/new")%>
-        <p><%= link_to "home", root_path %></p>
-      </ul>
-     </div>
-    </div>
+          <% if flash[:notice] %>
+            <p class = "notice"><%= flash[:notice]%></p>
+          <% end %>
 
-    <%= yield %>
+          <%= yield %>
+
+          <footer>
+            <%= render "shared/footer"%>
+          </footer>
+      </div>
   </body>
 </html>

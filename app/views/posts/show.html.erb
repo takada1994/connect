@@ -1,6 +1,9 @@
+<%# 個別投稿ページ %>
+
 <%= @post.content %>
 <%= @post.created_at %>
 
-<%= link_to("編集", "/posts/#{@post.id}/edit")%>
-
-<%= link_to(" 削除", "/posts/#{@post.id}/destroy", {method:"post"}) %>
+<%= link_to "編集", edit_post_path(@post)%>
+<%# <%= link_to "編集", [:edit, @post]%> 
+<%= link_to " 削除", post_path(@post), method: :delete, 
+    data: { confirm:"投稿を削除しても良いですか？" } %>

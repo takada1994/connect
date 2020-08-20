@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
-  get 'posts/index'
+  get 'users/index'
+ # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get :about, to: "home#about"
-  get :login, to: "home#login" , as:"login"
 
-  get "posts/:id" => "posts#show"
-  get :new, to: "posts#new"
-  post "posts/create" => "posts#create"
-  get "posts/:id/edit" => "posts#edit"
-  post "posts/:id/update" => "posts#update"
-  post "posts/:id/destroy" => "posts#destroy"
+  resources :posts 
+
+  resources :users, except: %i[new]
+  get "signup" => "users#new"
+
 end

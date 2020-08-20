@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="home.scss">
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <%# <a href="/" class="navbar-brand">connect</a> %>
+    <%= link_to root_path, class: "navbar-brand font-weight-bold" do %>
+    Connect
+    <% end %>
+      <button class="navbar-toggler" type="button"
+      data-toggle="collapse"
+      data-target="#navmenu1"
+      aria-controls="navmenu1"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navmenu1">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">Menu#1</a>
+      <a class="nav-item nav-link" href="#">Menu#2</a>
+      <a class="nav-item nav-link" href="#">Menu#3</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+    <div class="cover">
+    <%# <h1 class="display-4 mb-4"><%= link_to("Connect" , "/")%></h1> %>
+        <div class="m-10px">
+        <a href = "#" class="btn btn-primary btn-lg ">新規登録</a>
+        </div>
+        <div class="header-list">
+            <ul>
+                <%= link_to("登録する" , "/signup")%>
+                <%= link_to("ユーザー一覧" , users_path)%>
+                <%= link_to("投稿一覧" , posts_path)%>
+                <%= link_to("新規投稿" , new_post_path)%>
+            </ul>
+        </div>
+    <div>
+</header>

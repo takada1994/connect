@@ -1,4 +1,6 @@
-<%= form_tag("/posts/create") do %>
-<textarea name = "content"></textarea>
-<input type = "submit" value = "投稿">
+<%# 新規投稿ページ %>
+
+<%= form_with model: @post, url: posts_path do |f| %>
+    <%= f.text_area :content ,cols:30, rows: 5 %>
+    <%= f.submit "投稿する" %>
 <% end %>

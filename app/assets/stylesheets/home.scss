@@ -2,23 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
+html {
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    letter-spacing: 1px;
 }
 
-.header {
-    background-color: powderblue;
-    color: white;
-    height: 90px;
-    h2 {
-        
-    }
-}
-
-.header-logo {
-    float: left;
-    font-size: 40px;
-    padding: 20px 40px;
+// 背景画像に関する設定
+.cover {
+  background-image: image-url('01.jpg'); 
+  background-size: cover;
+  // opacity: 0.7;
 }
 
 .header-list li {
@@ -28,30 +22,15 @@ body {
 }
 
 .main {
-  background-color: #bdf7f1;
-  height: 200px;
+  background-color: #f4f4f4;
+  // height: 200px;
+  height: auto;
+  padding: 40px 0px;
 }
 
-.contact-form {
-  padding-top: 100px;
-}
-
-.footer {
-  background-color: powderblue;
-  color: white;
-  height: 120x;
-  padding: 40px;
-}
-
-.footer-logo {
-  font-size: 32px;
-  float: left;
-}
-
-.footer-list {
-  float: right;
-}
-
-.footer-list li {
-  padding-bottom: 20px;
+footer {
+  background-color: rgb(230, 230, 230);
+  color: rgb(0, 0, 0);
+  // padding-top: auto;
+  // margin-top: auto;
 }
