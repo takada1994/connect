@@ -1,0 +1,7 @@
+<% if @users.any? %>
+    <% @users.each do |user| %>
+        <%= link_to user.name , user_path(user)%>
+    <% end%>
+    <% else%>
+        <p>まだユーザーは登録されていません</p>
+    <% end%>
