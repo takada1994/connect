@@ -8,7 +8,10 @@ Rails.application.routes.draw do
 
   resources :posts 
 
-  resources :users, except: %i[new]
+  resources :users, except: %i[new] do
+    get "search", on: :collection
+  end
+  
   get :signup, to: "users#new"
 
   resource :session, only:[:create , :destroy]

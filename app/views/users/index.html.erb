@@ -1,3 +1,8 @@
+<%= form_tag :search_users, method: :get, class: "serch" do %>
+    <%= text_field_tag "q", params[:q] %>
+    <%= submit_tag "検索" %>
+<% end %>
+
 <% if @users.any? %>
     <% @users.each do |user| %>
     <div class = "user_index_item">

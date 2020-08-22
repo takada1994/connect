@@ -1,2 +1,7 @@
-<h1>Accounts#show</h1>
-<p>Find me in app/views/accounts/show.html.erb</p>
+<h1>マイページ</h1>
+
+<ul class = 'toolbar'>
+    <%= menu_link_to 'アカウント情報の編集', :edit_account%>
+</ul>
+
+<%= render "users/body"%>

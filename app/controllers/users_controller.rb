@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 before_action :set_user, only: %i[show edit update destroy]
   
+# ユーザー一覧
   def index
     @users = User.all.order(id: :desc)
   end
@@ -38,6 +39,12 @@ before_action :set_user, only: %i[show edit update destroy]
     @user.destroy
     flash[:notice] = "ユーザー情報を削除しました"
     redirect_to(users_path)
+  end
+
+  #検索
+  def search
+    @users = User.search(params[:q])
+    render "index"
   end
 
   private
