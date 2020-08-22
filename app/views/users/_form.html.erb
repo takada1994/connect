@@ -1,0 +1,6 @@
+    <%= form_with model: @user, url: users_path do |f| %>
+    <p>ユーザー名</p>
+    <%= f.text_field :name%>
+    <p>メールアドレス </p>
+    <%= f.text_field :email%>
+    <% end %>
