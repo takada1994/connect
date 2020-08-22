@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="home.scss">
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <%# <a href="/" class="navbar-brand">connect</a> %>
+    <%= link_to root_path, class: "navbar-brand font-weight-bold" do %>
+      Connect
+    <% end %>
+
+      <button class="navbar-toggler" type="button"
+      data-toggle="collapse"
+      data-target="#navmenu1"
+      aria-controls="navmenu1"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="navmenu1">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/signup">Connectをはじめる</a>
+        <a class="nav-item nav-link" href="#">ログイン</a>
+    </div>
+  </div>
+</nav>

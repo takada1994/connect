@@ -8,3 +8,14 @@
     overflow: hidden;
     box-shadow: 0 2px 6px #c1ced7;
   }
+
+  .show {
+  padding: 20px 30px;
+  overflow: scroll;
+  box-shadow: 0 2px 6px rgb(176, 176, 176);
+  }
+
+  .post-time {
+    color: rgb(116, 116, 116);
+    font-size: small;
+  }

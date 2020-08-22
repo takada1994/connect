@@ -1,0 +1,19 @@
+<h2>Connectにログイン</h2>
+
+<%= form_tag :session, id: "login_gorm" do %>
+
+    <div>
+        <label>ユーザー名</label>
+        <input type = "text" name = "name">
+    </div>
+
+    <div>
+        <label>パスワード</label>
+        <input type = "password" name = "password">
+    </div>
+
+    <div>
+        <input type = "submit" value = "ログイン">
+    </div>
+
+<% end %>

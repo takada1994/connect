@@ -1,7 +1,6 @@
 <%# ユーザー個別ページ %>
 
-<%= @user.name %>
-<%= @user.created_at %>
+<%= render "body" %>
 
 <%= link_to "登録情報を編集する", edit_user_path(@user) %>
 <%= link_to "登録情報を削除", user_path(@user), method: :delete,

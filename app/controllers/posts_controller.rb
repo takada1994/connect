@@ -1,10 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
-  # def index
-  #   @posts = Post.all
-  # end
-
   def index
     @posts = Post.all.order(created_at: :desc)
   end
@@ -22,7 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      flash[:notice] = "投稿に成功しました♪"
+      flash[:notice] = "投稿しました"
     redirect_to(posts_path)
     else
       render(new_post_path)
@@ -38,16 +34,6 @@ class PostsController < ApplicationController
       render(edit_post_path)
     end
   end
-  # def update
-  #   @post.content = params[:content]
-  #   if @post.save
-
-  #     redirect_to(posts_path)
-  #   else
-  #     render(edit_post_path)
-  #   end
-  # end
-
 
   def destroy
     @post.destroy
@@ -65,20 +51,3 @@ class PostsController < ApplicationController
   end
 
 end
-
-  
-  # def update
-  #   @post.content = params[:content]
-  #   if @post.save
-  #     flash[:notice] = "投稿を編集しました"
-  #     redirect_to("/posts/index")
-  #   end
-  # end
-
-  # def update
-  #   if @post.save
-  #     redirect_to("/posts/index")
-  #   else
-  #     redirect_to("/posts/#{@post.id}/edit")
-  #   end
-  # end

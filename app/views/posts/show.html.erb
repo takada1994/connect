@@ -1,9 +1,22 @@
 <%# 個別投稿ページ %>
 
-<%= @post.content %>
-<%= @post.created_at %>
+<div class="container-fluid">
+    <div class="show">
 
-<%= link_to "編集", edit_post_path(@post)%>
-<%# <%= link_to "編集", [:edit, @post]%> 
-<%= link_to " 削除", post_path(@post), method: :delete, 
-    data: { confirm:"投稿を削除しても良いですか？" } %>
+        <%= @post.content %>
+
+        <div class = "post-time">
+            <%= @post.created_at %>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div class="my-box mr-2">
+                <%= link_to "編集", edit_post_path(@post)%>
+            </div>
+            <div class="my-box">
+                <%= link_to " 削除", post_path(@post), method: :delete, 
+                    data: { confirm:"投稿を削除しても良いですか？" } %>
+            </div>
+        </div>
+    </div>
+</div>
