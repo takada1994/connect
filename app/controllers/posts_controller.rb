@@ -8,13 +8,12 @@ class PostsController < ApplicationController
   def show
   end
 
+
+
   def new
     @post = Post.new
   end
 
-  def edit
-  end
-  
   def create
     @post = Post.new(post_params)
     if @post.save
@@ -25,8 +24,14 @@ class PostsController < ApplicationController
     end
   end
 
+
+
+  def edit
+  end
+  
   def update
-    @post.assign_attributes(params[:post])
+    # @post.assign_attributes(params[:post])
+    @post.content = params[:content]
     if @post.save
       flash[:notice] = "変更を保存しました"
       redirect_to(posts_path)
@@ -34,6 +39,8 @@ class PostsController < ApplicationController
       render(edit_post_path)
     end
   end
+
+
 
   def destroy
     @post.destroy

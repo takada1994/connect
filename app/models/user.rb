@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 
+    #検索機能
     class << self
         def search(query)
             rel = order("name")
@@ -10,9 +11,10 @@ class User < ApplicationRecord
             rel
         end 
     end
+    #ここまで
 
     has_secure_password
 
-    # varidates :name, presence: true
+    validates :name, presence: true
     validates :email, {uniqueness: true}
 end
